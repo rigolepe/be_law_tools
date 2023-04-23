@@ -51,27 +51,27 @@ def test(clean):
     print(md)
 
 
-@main.command()
-@click.option('--start-date', '-s', 'sdate', default='1800-01-01')
-@click.option('--end-date', '-e', 'edate', default=None)
-@click.option(
-    '--interval',
-    '-i',
-    type=click.Choice(['year', 'month', 'day']),
-    default='year')
-@click.option(
-    '--doc-type',
-    '-t',
-    'dtype',
-    type=click.Choice(
-        [*NL_DOCTYPES, *FR_DOCTYPES],
-        case_sensitive=False),
-    default='loi')
-@click.option(
-    '--output-dir',
-    '-o',
-    default='./output'
-)
+# @main.command()
+# @click.option('--start-date', '-s', 'sdate', default='1800-01-01')
+# @click.option('--end-date', '-e', 'edate', default=None)
+# @click.option(
+#     '--interval',
+#     '-i',
+#     type=click.Choice(['year', 'month', 'day']),
+#     default='year')
+# @click.option(
+#     '--doc-type',
+#     '-t',
+#     'dtype',
+#     type=click.Choice(
+#         [*NL_DOCTYPES, *FR_DOCTYPES],
+#         case_sensitive=False),
+#     default='loi')
+# @click.option(
+#     '--output-dir',
+#     '-o',
+#     default='./output'
+# )
 def scan(sdate, edate, interval, dtype, output_dir):
     """
     Generate a url for each date within given interval,
